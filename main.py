@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle as pkl
 import numpy as np
+import sklearn
 
 class_list = {'0': 'Negative', '1': 'Positive', '2': 'Neutral'}
 with open('ec_vsfc.pkl', 'rb') as file:
