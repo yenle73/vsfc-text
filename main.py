@@ -12,7 +12,7 @@ model = pkl.load(input_md)
 
 st.title('Sentiment Analysis from Vietnamese Students\' Feedback')
 
-text = st.text_input('Enter text')
+text = st.text_area('Enter text', '')
 
 if text != '':
   if st.button('Predict'):
