@@ -10,5 +10,3 @@ st.title('Sentiment Analysis')
 
 text = st.text_input('Enter text')
 
-if text is not None:
-  
