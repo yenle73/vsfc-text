@@ -4,8 +4,11 @@ import numpy as np
 import sklearn
 
 class_list = {'0': 'Negative', '1': 'Positive', '2': 'Neutral'}
-with open('ec_vsfc.pkl', 'rb') as file:
-  encoder = pkl.load(file)
+input_ec = open('ec_vsfc.pkl', 'rb')
+encoder = pkl.load(input_ec)
+
+input_md = open('lrc_vsfc.pkl', 'rb')
+model = pkl.load(input_md)
 
 st.title('Sentiment Analysis from Vietnamese Students\' Feedback')
 
