@@ -18,5 +18,5 @@ text = st.text_area('Enter text', '')
 if text != '':
   if st.button('Predict'):
     feature_vector = encoder.transform([text])
-    rs = str((model.predict(feature_vector)[0])
+    rs = str((model.predict(feature_vector))[0])
     st.write(class_list[rs])
