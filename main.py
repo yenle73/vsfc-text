@@ -14,3 +14,9 @@ st.title('Sentiment Analysis from Vietnamese Students\' Feedback')
 
 text = st.text_input('Enter text')
 
+if text != '':
+  if st.button('Predict'):
+    feature_vector = encoder.transform(text)
+    rs = model.predict(feature_vector)
+    label = map(rs, class_list)
+    st.write(label)
