@@ -17,7 +17,7 @@ text = st.text_area('Enter text', '')
 
 if text != '':
   if st.button('Predict'):
-    feature_vector = encoder.transform(text)
-    rs = model.predict(feature_vector)
+    feature_vector = encoder.transform([text])
+    rs = str((model.predict(feature_vector)[0])
     label = map(rs, class_list)
     st.write(label)
